@@ -1,6 +1,6 @@
 <script>
 
-const bgColor = #CCCCFF
+const bgColor = #CCCCFF;
 const gifURL = 'https://i.gifer.com/4xjK.gif'
 const gifWidth = 100
 const gifHeight = 100
@@ -8,7 +8,7 @@ const overlapX = 0.25
 const overlapY = 0.25
 const offsetX = gifWidth * overlapX
 const columns = window.innerWidth / (gifWidth * overlapX)
-const rows = window.innerHeight / (gifHeight * overlapY) * 0.165
+const rows = window.innerHeight / (gifHeight * overlapY) * 0.65
 
 function createGif (x, y) {
   const gif = document.createElement('img') 
@@ -30,6 +30,12 @@ function setup () {
       const y = r * gifHeight * overlapY
       createGif(x, y)
     }
+  }
+}
+
+window.addEventListener('load', setup)
+
+</script>
   }
 }
 
